@@ -1,5 +1,5 @@
-﻿using DataAccess;
-using Models;
+﻿using VendingMachie.DataAccess;
+using VendingMachie.Models;
 using System.Collections.Generic;
 using System.Linq;
 

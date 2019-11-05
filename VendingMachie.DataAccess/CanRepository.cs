@@ -1,8 +1,8 @@
-﻿using Models;
+﻿using VendingMachie.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataAccess
+namespace VendingMachie.DataAccess
 {
   public class CanRepository
   {

@@ -1,5 +1,5 @@
 ﻿using VendingMachine.BusinessLogic;
-using Models;
+using VendingMachie.Models;
 using System.Windows;
 using System.Collections.Generic;
 using System.Windows.Controls;

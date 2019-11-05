@@ -109,7 +109,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\VendingMachie.Models.csproj">
+    <ProjectReference Include="..\VendingMachie.Models\VendingMachie.Models.csproj">
       <Project>{34783318-5ee6-4a85-8381-9851269a5228}</Project>
       <Name>VendingMachie.Models</Name>
     </ProjectReference>

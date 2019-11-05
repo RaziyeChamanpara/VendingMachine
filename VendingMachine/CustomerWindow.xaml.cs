@@ -1,4 +1,4 @@
-﻿using Models;
+﻿using VendingMachie.Models;
 using VendingMachine.BusinessLogic;
 using System.Windows;
 using System.Collections.Generic;
