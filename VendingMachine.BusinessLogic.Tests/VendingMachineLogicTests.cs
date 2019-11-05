@@ -4,7 +4,7 @@
 //using System.Collections.Generic;
 //using VendingMachine.mo;
 
-namespace VendingMachie.BusinessLogic.Tests
+namespace VendingMachine.BusinessLogic.Tests
 {
   [TestClass]
   public class VendingMachineLogicTests
@@ -13,10 +13,10 @@ namespace VendingMachie.BusinessLogic.Tests
     public void GetAllCans_Always_ShouldReturnAllCans()
     {
       ////Arrange
-      //VendingMachineLogic vendingMachineLogic = VendingMachineLogic.GetInstance();
+      //VendingMachineLogic VendingMachineLogic = VendingMachineLogic.GetInstance();
       //List<Can>
       ////Act
-      //=vendingMachineLogic.GetAllCans();
+      //=VendingMachineLogic.GetAllCans();
       ////Assert
     }
   }

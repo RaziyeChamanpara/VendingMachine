@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine", "VendingMachine\VendingMachine.csproj", "{5EDBFD04-814E-49C7-8569-FF868A6D3AB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachie.Models", "VendingMachie.Models\VendingMachie.Models.csproj", "{34783318-5EE6-4A85-8381-9851269A5228}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.Models", "VendingMachine.Models\VendingMachine.Models.csproj", "{34783318-5EE6-4A85-8381-9851269A5228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachie.DataAccess", "VendingMachie.DataAccess\VendingMachie.DataAccess.csproj", "{702FCFD5-BE18-4B86-BFE1-D998E4FC0022}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.DataAccess", "VendingMachine.DataAccess\VendingMachine.DataAccess.csproj", "{702FCFD5-BE18-4B86-BFE1-D998E4FC0022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachie.BusinessLogic", "VendingMachie.BusinessLogic\VendingMachie.BusinessLogic.csproj", "{1E9EA5F1-39AB-4741-A2E0-46C0497A146F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.BusinessLogic", "VendingMachine.BusinessLogic\VendingMachine.BusinessLogic.csproj", "{1E9EA5F1-39AB-4741-A2E0-46C0497A146F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachie.DataAccess.Tests", "VendingMachie.DataAccess.Tests\VendingMachie.DataAccess.Tests.csproj", "{49ADAAE4-DC33-44FB-BFF5-D68F649F0480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.DataAccess.Tests", "VendingMachine.DataAccess.Tests\VendingMachine.DataAccess.Tests.csproj", "{49ADAAE4-DC33-44FB-BFF5-D68F649F0480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachie.BusinessLogic.Tests", "VendingMachie.BusinessLogic.Tests\VendingMachie.BusinessLogic.Tests.csproj", "{5EA853AC-F00F-49B2-8932-7FA8567A2B42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.BusinessLogic.Tests", "VendingMachine.BusinessLogic.Tests\VendingMachine.BusinessLogic.Tests.csproj", "{5EA853AC-F00F-49B2-8932-7FA8567A2B42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

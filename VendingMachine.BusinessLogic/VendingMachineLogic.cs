@@ -1,5 +1,5 @@
-﻿using VendingMachie.DataAccess;
-using VendingMachie.Models;
+﻿using VendingMachine.DataAccess;
+using VendingMachine.Models;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,14 +10,14 @@ namespace VendingMachine.BusinessLogic
     MoneyRepository MoneyRepository { get; set; } = new MoneyRepository();
     CanRepository CanRepository { get; set; } = new CanRepository();
 
-    private static VendingMachineLogic _vendingMachineLogic = new VendingMachineLogic();
+    private static VendingMachineLogic _VendingMachineLogic = new VendingMachineLogic();
     private VendingMachineLogic()
     {
 
     }
     public static VendingMachineLogic GetInstance()
     {
-      return _vendingMachineLogic;
+      return _VendingMachineLogic;
     }
     public List<Can> GetAllCans()
     {

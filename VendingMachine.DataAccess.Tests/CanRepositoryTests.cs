@@ -1,10 +1,10 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using VendingMachie.Models;
+using VendingMachine.Models;
 
 
-namespace VendingMachie.DataAccess.Tests
+namespace VendingMachine.DataAccess.Tests
 {
   [TestClass]
   public class CanRepositoryTests

@@ -1,4 +1,4 @@
-﻿namespace VendingMachie.Models
+﻿namespace VendingMachine.Models
 {
     public class Can
     {

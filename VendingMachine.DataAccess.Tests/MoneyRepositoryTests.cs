@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VendingMachie.Models;
+using VendingMachine.Models;
 using FluentAssertions;
 
-namespace VendingMachie.DataAccess.Tests
+namespace VendingMachine.DataAccess.Tests
 {
   [TestClass]
   public class MoneyRepositoryTests

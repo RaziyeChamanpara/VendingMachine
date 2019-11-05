@@ -1,5 +1,5 @@
-﻿using VendingMachie.Models;
-namespace VendingMachie.DataAccess
+﻿using VendingMachine.Models;
+namespace VendingMachine.DataAccess
 {
   public class MoneyRepository
   {

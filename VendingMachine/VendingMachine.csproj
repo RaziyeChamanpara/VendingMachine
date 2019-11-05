@@ -109,17 +109,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VendingMachie.Models\VendingMachie.Models.csproj">
-      <Project>{34783318-5ee6-4a85-8381-9851269a5228}</Project>
-      <Name>VendingMachie.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VendingMachie.BusinessLogic\VendingMachie.BusinessLogic.csproj">
-      <Project>{1e9ea5f1-39ab-4741-a2e0-46c0497a146f}</Project>
-      <Name>VendingMachie.BusinessLogic</Name>
-    </ProjectReference>
+    <Resource Include="Images\Main.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Main.jpg" />
+    <ProjectReference Include="..\VendingMachine.BusinessLogic\VendingMachine.BusinessLogic.csproj">
+      <Project>{1e9ea5f1-39ab-4741-a2e0-46c0497a146f}</Project>
+      <Name>VendingMachine.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VendingMachine.Models\VendingMachine.Models.csproj">
+      <Project>{34783318-5ee6-4a85-8381-9851269a5228}</Project>
+      <Name>VendingMachine.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
