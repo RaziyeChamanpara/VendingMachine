@@ -43,14 +43,15 @@ namespace VendingMachine.DataAccess
     {
       return _cans.Where(x => x.Id == id).FirstOrDefault();
     }
-    public void Remove(int id)
+    public bool Remove(int id)
     {
       var removingCan = _cans.Where(x => x.Id == id).FirstOrDefault();
 
       if (removingCan == null || removingCan.Count == 0)
-        return;
+        return false;
 
       removingCan.Count--;
+      return true;
     }
     public void Update(Can newCan)
     {
