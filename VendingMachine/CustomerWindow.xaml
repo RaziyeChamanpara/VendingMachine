@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:VendingMachine"
         mc:Ignorable="d"
         Title="CustomerWindow" Height="550" Width="800"
+        WindowState="Maximized"
         Loaded="Window_Loaded">
     
 
