@@ -15,13 +15,18 @@ namespace VendingMachine.DataAccess
       new Can { Name = "pepsi",Id=5, Count = 2, Price = 4.5m },
       new Can { Name = "lemonade",Id=6, Count = 1, Price = 4.5m },
     };
-    public CanRepository()
+    private static CanRepository _canRepository = new CanRepository();
+    private CanRepository()
     {
 
     }
     public CanRepository(List<Can> cans)
     {
       _cans = cans;
+    }
+    public static CanRepository GetInstance()
+    {
+      return _canRepository;
     }
     public List<Can> GetAll()
     {

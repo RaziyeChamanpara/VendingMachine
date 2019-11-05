@@ -1,10 +1,21 @@
-﻿using VendingMachine.Models;
+﻿using System;
+using VendingMachine.Models;
 namespace VendingMachine.DataAccess
 {
   public class MoneyRepository
   {
     private decimal _cash = 0;
     private decimal _credit = 0;
+    private static MoneyRepository _moneyRepository=new MoneyRepository();
+    public static MoneyRepository GetInstance()
+    {
+      return _moneyRepository;
+    }
+
+    public MoneyRepository()
+    {
+
+    }
 
     public void Add(decimal price, PaymentMethod paymentMethod)
     {
@@ -14,6 +25,9 @@ namespace VendingMachine.DataAccess
       else
         _credit += price;
     }
+
+    
+
     public decimal GetAvailableCash()
     {
       return _cash;

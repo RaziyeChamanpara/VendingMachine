@@ -14,6 +14,7 @@ namespace VendingMachine.DataAccess.Tests
       MoneyRepository moneyRepository = new MoneyRepository();
 
       //Act
+      moneyRepository.Add(4, PaymentMethod.Credit);
       moneyRepository.ResetCredit();
 
       //Asert

@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-//using fluentAssertions;
-//using VendingMachine.BusinessLogic;
-//using System.Collections.Generic;
-//using VendingMachine.mo;
+using FluentAssertions;
+using VendingMachine.BusinessLogic;
+using System.Collections.Generic;
+using VendingMachine.Models;
 
 namespace VendingMachine.BusinessLogic.Tests
 {
@@ -12,12 +12,20 @@ namespace VendingMachine.BusinessLogic.Tests
     [TestMethod]
     public void GetAllCans_Always_ShouldReturnAllCans()
     {
-      ////Arrange
-      //VendingMachineLogic VendingMachineLogic = VendingMachineLogic.GetInstance();
-      //List<Can>
-      ////Act
-      //=VendingMachineLogic.GetAllCans();
-      ////Assert
+      //Arrange
+      List<Can> cans = new List<Can>()
+      {
+        new Can() { Id = 1, Count = 0 },
+        new Can() { Id = 2, Count = 1 }
+      };
+
+      VendingMachineLogic VendingMachineLogic = new VendingMachineLogic(cans);
+
+      //Act
+      var results = VendingMachineLogic.GetAllCans();
+
+      //Assert
+      results.Count.Should().Be(cans.Count);
     }
   }
 }

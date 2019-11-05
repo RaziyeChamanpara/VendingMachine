@@ -7,7 +7,7 @@ namespace VendingMachine
 {
   public partial class CustomerWindow : Window
   {
-    VendingMachineLogic VendingMachineLogic { get; set; } = VendingMachineLogic.GetInstance();
+    VendingMachineLogic VendingMachineLogic { get; set; } = new VendingMachineLogic();
     List<Can> AvailableCans { get; set; }
     Can SelectedCan { get; set; }
     public CustomerWindow()

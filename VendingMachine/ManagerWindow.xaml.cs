@@ -9,7 +9,7 @@ namespace VendingMachine
   public partial class ManagementWindow : Window
   {
     List<Can> AllCans { get; set; } = new List<Can>();
-    VendingMachineLogic VendingMachineLogic { get; set; } = VendingMachineLogic.GetInstance();
+    VendingMachineLogic VendingMachineLogic { get; set; } = new VendingMachineLogic();
     public ManagementWindow()
     {
       InitializeComponent();

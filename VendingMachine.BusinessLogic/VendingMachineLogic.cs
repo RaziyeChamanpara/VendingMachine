@@ -7,18 +7,20 @@ namespace VendingMachine.BusinessLogic
 {
   public class VendingMachineLogic
   {
-    MoneyRepository MoneyRepository { get; set; } = new MoneyRepository();
-    CanRepository CanRepository { get; set; } = new CanRepository();
-
-    private static VendingMachineLogic _VendingMachineLogic = new VendingMachineLogic();
-    private VendingMachineLogic()
+    public VendingMachineLogic(List<Can> cans)
     {
-
+      CanRepository=new CanRepository(cans);
+      MoneyRepository = MoneyRepository.GetInstance();
     }
-    public static VendingMachineLogic GetInstance()
+    public VendingMachineLogic()
     {
-      return _VendingMachineLogic;
+      CanRepository = CanRepository.GetInstance();
+      MoneyRepository = MoneyRepository.GetInstance();
     }
+
+    MoneyRepository MoneyRepository { get; set; } 
+    CanRepository CanRepository { get; set; }
+    
     public List<Can> GetAllCans()
     {
       return CanRepository.GetAll();
