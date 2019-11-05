@@ -1,6 +1,6 @@
-﻿using System.Windows;
-using VendingMachine.BusinessLogic;
+﻿using VendingMachine.BusinessLogic;
 using Models;
+using System.Windows;
 using System.Collections.Generic;
 using System.Windows.Controls;
 
@@ -17,9 +17,9 @@ namespace VendingMachine
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
       FillAvailables();
+
       GenerateRestockControls();
     }
-
     private void GenerateRestockControls()
     {
       AllCans = VendingMachineLogic.GetAllCans();

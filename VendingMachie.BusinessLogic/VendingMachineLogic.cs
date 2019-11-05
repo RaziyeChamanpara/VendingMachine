@@ -9,6 +9,7 @@ namespace VendingMachine.BusinessLogic
   {
     MoneyRepository MoneyRepository { get; set; } = new MoneyRepository();
     CanRepository CanRepository { get; set; } = new CanRepository();
+
     private static VendingMachineLogic _vendingMachineLogic = new VendingMachineLogic();
     private VendingMachineLogic()
     {
@@ -16,7 +17,6 @@ namespace VendingMachine.BusinessLogic
     }
     public static VendingMachineLogic GetInstance()
     {
-
       return _vendingMachineLogic;
     }
     public void Sell(Can can, PaymentMethod paymentMethod)
@@ -50,6 +50,7 @@ namespace VendingMachine.BusinessLogic
 
         CanRepository.UpdateCount(oldCan);
       }
+
       MoneyRepository.ResetCash();
 
       MoneyRepository.ResetCredit();

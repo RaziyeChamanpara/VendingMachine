@@ -1,5 +1,4 @@
 ﻿using Models;
-using System.Collections.Generic;
 namespace DataAccess
 {
   public class MoneyRepository
@@ -7,14 +6,6 @@ namespace DataAccess
     private decimal _cash = 0;
     private decimal _credit = 0;
 
-    public decimal GetAvailableCash()
-    {
-      return _cash;
-    }
-    public decimal GetAvailableCredit()
-    {
-      return _credit;
-    }
     public void Add(decimal price, PaymentMethod paymentMethod)
     {
       if (paymentMethod == PaymentMethod.Cash)
@@ -22,6 +13,14 @@ namespace DataAccess
 
       else
         _credit += price;
+    }
+    public decimal GetAvailableCash()
+    {
+      return _cash;
+    }
+    public decimal GetAvailableCredit()
+    {
+      return _credit;
     }
     public void ResetCash()
     {

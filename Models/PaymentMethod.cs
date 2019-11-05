@@ -1,9 +1,8 @@
 ﻿namespace Models
 {
-    public enum PaymentMethod
-    {
-        Cash,
-        Credit
-            
-    }
+  public enum PaymentMethod
+  {
+    Cash,
+    Credit
+  }
 }

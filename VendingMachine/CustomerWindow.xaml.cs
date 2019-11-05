@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using Models;
+﻿using Models;
 using VendingMachine.BusinessLogic;
+using System.Windows;
+using System.Collections.Generic;
 
 namespace VendingMachine
 {
@@ -14,19 +14,28 @@ namespace VendingMachine
     {
       InitializeComponent();
     }
-
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
       LoadData();
     }
-
     private void LoadData()
     {
       AvailableCans = VendingMachineLogic.GetAvailableCans();
       cansDataGrid.ItemsSource = AvailableCans;
       cansDataGrid.SelectedIndex = 0;
     }
+    private void CansDataGrid_SelectedCellsChanged(object sender, System.Windows.Controls.SelectedCellsChangedEventArgs e)
+    {
+      ChangeSelectedCan(cansDataGrid.SelectedIndex);
 
+      selectedCanLabel.Content = SelectedCan.Name;
+    }
+    private void ChangeSelectedCan(int selectedIndex)
+    {
+      if (selectedIndex < 0)
+        selectedIndex = 0;
+      SelectedCan = AvailableCans[selectedIndex];
+    }
     private void BuyButton_Click(object sender, RoutedEventArgs e)
     {
       if (creditRadioButton.IsChecked != true
@@ -43,20 +52,6 @@ namespace VendingMachine
 
       LoadData();
 
-    }
-
-    private void CansDataGrid_SelectedCellsChanged(object sender, System.Windows.Controls.SelectedCellsChangedEventArgs e)
-    {
-      ChangeSelectedCan(cansDataGrid.SelectedIndex);
-
-      selectedCanLabel.Content = SelectedCan.Name;
-    }
-
-    private void ChangeSelectedCan(int selectedIndex)
-    {
-      if (selectedIndex < 0)
-        selectedIndex = 0;
-      SelectedCan = AvailableCans[selectedIndex];
     }
   }
 }
