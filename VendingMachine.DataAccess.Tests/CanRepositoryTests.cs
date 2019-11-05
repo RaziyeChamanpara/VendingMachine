@@ -63,11 +63,29 @@ namespace VendingMachine.DataAccess.Tests
       CanRepository canRepository = new CanRepository(cans);
 
       //Act
-      canRepository.Remove(1);
+      var result=canRepository.Remove(1);
 
       //Assert
       var deletedCan = canRepository.Get(1);
       deletedCan.Count.Should().Be(1);
+      result.Should().Be(true);
+    }
+
+    [TestMethod]
+    public void Remove_IfCountIs0_ShouldReturnFalse()
+    {
+      //Arrange
+      List<Can> cans = new List<Can>()
+      {
+        new Can { Name = "water", Count = 0, Id = 1 },
+      };
+      CanRepository canRepository = new CanRepository(cans);
+
+      //Act
+      var result=canRepository.Remove(1);
+
+      //Assert
+      result.Should().Be(false);
     }
 
     [TestMethod]

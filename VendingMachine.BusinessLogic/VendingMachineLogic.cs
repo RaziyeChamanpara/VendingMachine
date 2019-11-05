@@ -10,7 +10,7 @@ namespace VendingMachine.BusinessLogic
     public VendingMachineLogic(List<Can> cans)
     {
       CanRepository = new CanRepository(cans);
-      MoneyRepository = MoneyRepository.GetInstance();
+      MoneyRepository = new MoneyRepository();
     }
     public VendingMachineLogic()
     {
@@ -37,10 +37,13 @@ namespace VendingMachine.BusinessLogic
     {
       return MoneyRepository.GetAvailableCredit();
     }
-    public void Sell(Can can, PaymentMethod paymentMethod)
+    public bool Sell(Can can, PaymentMethod paymentMethod)
     {
-      if (CanRepository.Remove(can.Id))
-        MoneyRepository.Add(can.Price, paymentMethod);
+      if (!(CanRepository.Remove(can.Id)))
+        return false;
+
+      MoneyRepository.Add(can.Price, paymentMethod);
+      return true;
     }
     public void Restock(List<Can> restockCans)
     {
