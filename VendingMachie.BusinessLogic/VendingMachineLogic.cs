@@ -19,11 +19,6 @@ namespace VendingMachine.BusinessLogic
     {
       return _vendingMachineLogic;
     }
-    public void Sell(Can can, PaymentMethod paymentMethod)
-    {
-      CanRepository.Remove(can);
-      MoneyRepository.Add(can.Price, paymentMethod);
-    }
     public List<Can> GetAllCans()
     {
       return CanRepository.GetAll();
@@ -40,15 +35,20 @@ namespace VendingMachine.BusinessLogic
     {
       return MoneyRepository.GetAvailableCredit();
     }
-    public void Restock(List<Can> newCans)
+    public void Sell(Can can, PaymentMethod paymentMethod)
     {
-      foreach (var newCan in newCans.ToList())
+      CanRepository.Remove(can.Id);
+      MoneyRepository.Add(can.Price, paymentMethod);
+    }
+    public void Restock(List<Can> restockCans)
+    {
+      foreach (var restockCan in restockCans.ToList())
       {
-        var oldCan=CanRepository.Get(newCan.Id);
+        var can=CanRepository.Get(restockCan.Id);
 
-        oldCan.Count += newCan.Count;
+        can.Count += restockCan.Count;
 
-        CanRepository.UpdateCount(oldCan);
+        CanRepository.Update(can);
       }
 
       MoneyRepository.ResetCash();
