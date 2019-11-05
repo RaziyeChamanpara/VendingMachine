@@ -27,17 +27,30 @@ namespace VendingMachine
     private void CansDataGrid_SelectedCellsChanged(object sender, System.Windows.Controls.SelectedCellsChangedEventArgs e)
     {
       ChangeSelectedCan(cansDataGrid.SelectedIndex);
-
-      selectedCanLabel.Content = SelectedCan.Name;
     }
     private void ChangeSelectedCan(int selectedIndex)
     {
       if (selectedIndex < 0)
         selectedIndex = 0;
-      SelectedCan = AvailableCans[selectedIndex];
+
+      if (AvailableCans.Count == 0)
+      {
+        SelectedCan = null;
+        selectedCanLabel.Content = "";
+      }
+      else
+      {
+        SelectedCan = AvailableCans[selectedIndex];
+        selectedCanLabel.Content = SelectedCan.Name;
+      }
     }
     private void BuyButton_Click(object sender, RoutedEventArgs e)
     {
+      if(SelectedCan==null)
+      {
+        MessageBox.Show("Choose a Drink.");
+        return;
+      }
       if (creditRadioButton.IsChecked != true
         && cashRadioButton.IsChecked != true)
       {
@@ -51,6 +64,8 @@ namespace VendingMachine
         VendingMachineLogic.Sell(SelectedCan, PaymentMethod.Cash);
 
       LoadData();
+
+      MessageBox.Show("Operation Completed Successfully");
 
     }
   }

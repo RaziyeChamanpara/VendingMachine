@@ -66,6 +66,8 @@ namespace VendingMachine
       VendingMachineLogic.Restock(AllCans);
 
       FillAvailables();
+
+      MessageBox.Show("Restock Completed Successfully.");
     }
 
   }

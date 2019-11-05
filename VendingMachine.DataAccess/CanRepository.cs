@@ -30,13 +30,13 @@ namespace VendingMachine.DataAccess
     }
     public List<Can> GetAll()
     {
-      return _cans.Select(can=> new Can()
+      return _cans.Select(can => new Can()
       {
         Id = can.Id,
-        Count=can.Count,
-        Name=can.Name,
-        Price=can.Price
-        
+        Count = can.Count,
+        Name = can.Name,
+        Price = can.Price
+
       }).ToList();
     }
     public Can Get(int id)
@@ -55,7 +55,7 @@ namespace VendingMachine.DataAccess
     }
     public void Update(Can newCan)
     {
-      var oldCan=_cans.Where(x => x.Id == newCan.Id).FirstOrDefault(); 
+      var oldCan = _cans.Where(x => x.Id == newCan.Id).FirstOrDefault();
 
       oldCan.Count = newCan.Count;
       oldCan.Price = newCan.Price;
